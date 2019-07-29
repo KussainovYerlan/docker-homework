@@ -1,5 +1,6 @@
 FROM php:fpm
 
+COPY ./ /var/www/html
 WORKDIR /var/www/html
 
 # Обновляем список пакетов
