@@ -24,31 +24,6 @@ services:
     networks:
       - lbpapp
 
-  db:
-    image: mysql:5.7
-    container_name: lesson9-db
-    environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-    volumes:
-      - mysql-data:/var/lib/mysql
-    networks:
-      - lbpapp
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-        - 8080:8080
-    networks:
-      - lbpapp
-
-volumes:
-  mysql-data:
-    driver: "local"
-
 networks:
   lbpapp:
     driver: "bridge"
