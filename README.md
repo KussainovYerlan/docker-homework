@@ -1,10 +1,16 @@
 # Docker homework
 
-## Установка
+### Требования
+
+GIT, docker, docker-compose
+
+### Установка
 
 ```
 git clone https://gitlab.school.noveogroup.com/kussainovyerlan/lesson-9_docker.git
-docker-compose build
+```
+```
+make build
 ```
 
 #### Возможные проблемы
@@ -20,6 +26,8 @@ docker-compose up -d
 Теперь вы можете обратиться к проекту по адресу 127.0.0.1:8888
 
 ### Задание
+
+- [ ] Добавить в *Makefile* полезные команды для ускорения ввода команд docker-compose.
 
 - [ ] К имеющимся контейнерам добавить контейнер с базой данных MySQL. При конфигурации контейнера необходимо использовать переменные среды из файла *.env*.
 
@@ -37,5 +45,3 @@ docker-compose up -d
   > ```
   >
   > Но для этого у контейнера должен быть указан *container_name: lesson9-db* 
-
-- [ ] Добавить в *Makefile* полезные команды для ускорения ввода.
