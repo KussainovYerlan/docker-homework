@@ -12,13 +12,6 @@ services:
 
   engine:
     build: ./docker/php
-    environment:
-      CRYPT_SECRET: ${CRYPT_SECRET}
-      NYSQL_HOST: ${MYSQL_HOST}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - ./:/var/www/html
     networks:
